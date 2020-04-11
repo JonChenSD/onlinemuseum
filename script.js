@@ -1,5 +1,6 @@
 var counter = 0;
 var elem = document.getElementById("changeText");
+var elemap = document.getElementById("map");
 var inst = setInterval(change, 4000);
 var temp = 0;
 
@@ -27,6 +28,24 @@ function newquote(x) {
   clearInterval(inst);
   elem.innerHTML = x;
 }
+
+function newmap(x) {
+  console.log("newmap");
+  console.log(elem);
+  console.log(elemap);
+  elemap.setAttribute("src",x);
+ 
+
+}
+
+function newmapdone() {
+  elemap.setAttribute("src","assets/mapoutline.svg");
+ 
+
+}
+
+
+
 
 function newqdone() {
   inst = setInterval(change,4000);
